@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="img.css">
+</head>
+
+<body>
+    <nav>
+        <ac href="#">Gmail</ac>
+        <ac href="#">Images</ac>
+        <img src="img/g-menu.PNG">
+        <button>Sign in</button>
+    </nav>
+    <section class="section-1">
+        <img src="img/logo.png" class="logo">
+        <formm><br><br>
+            <div class="s-box" id='lowr'>
+                <img src="img/search.svg" class="search-icon">
+                <input type="text" list="nani" onchange='gfs()' spellcheck="false"  class="s-input"  placeholder="Type something..." id="myInput">
+                        <datalist id="nani">
+                            <option value="grassroots">
+                            <option value="volunteering">
+                            <option value="mohandas karamachand gandhi">
+                            <option value="julian assange">
+                            <option value="nelson mandela">
+                        </datalist>
+                <img src="img/vs.png" class="vs-icon">
+                <div class='lang'>
+                <input type="submit" class="s-btn" id='ini' value="Google Search">
+                <input type="submit" class="s-btn" id='inii' value="I'm Feeling Lucky">
+                 </div>
+            </div>
+        </formm>
+        <div class="lang" id='language'>
+            Google offered in:
+            <ab href="#"> తెలుగు हिन्दी বাংলা मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</ab>
+            <ab href="#"></ab>   
+    </br>  
+        </div>
+        <a href=" ">  </a>
+      <p id='jf' > </p>
+    </section>
+    <footer>
+        <h4>India</h4>
+        <div class="links">
+            <div class="link-1">
+                <b href="#">Advertising</b>
+                <b href="#">Business</b>
+                <b href="#">About</b>
+                <b href="#">How Search works</b>
+            </div>
+            <div class="link-2">
+                <b href="#">Privacy</b>
+                <b href="#">Terms</b>
+                <b href="#">Settings</b>
+            </div>
+        </div>
+    </footer>
+<script>
+    function dis() {
+        document.getElementById('ini').style.display = 'none';
+        document.getElementById('inii').style.display = 'none';
+        document.getElementById('language').style.display = 'none';
+       document.getElementById('lowr').style.marginTop='0px';
+    }
+function gfs(){
+    var hi = 'grassroots'
+    var f = 'volunteering'
+    var j = 'mohandaskaramachandgandhi'
+    var l = 'julianassange'
+    var m = 'nelsonmandela'
+    var inputValh = document.getElementById("myInput").value.toLowerCase().split(' ').join('');
+    if (inputValh == hi) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "https://en.wikipedia.org/wiki/Grassroots#:~:text=A%20grassroots%20movement%20is%20one,%2C%20national%2C%20or%20international%20level.");
+        link.textContent = 'Grassroots - Wikipedia'
+        document.getElementById('jf').innerHTML = 'A grassroots movement is one that uses the people in a given district, region, or community as the basis for a political or economic movement. Grassroots movements and organizations use collective action from the local level to effect change at the local, regional, national, or international level. ';
+        var abz = 1
+         dis()
+    }
+    if (inputValh == f) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "https://en.wikipedia.org/wiki/Volunteering");
+        link.textContent = 'Volunteering - Wikipedia'
+        document.getElementById('jf').innerHTML = ' Volunteering is a voluntary act of an individual or group freely giving time and labour for community service. Many volunteers are specifically trained in the areas they work, such as medicine, education, or emergency rescue. '
+        var abz = 1
+        document.getElementById('ini').style.display = 'none';
+         dis()
+    }
+    if (inputValh == j) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "https://en.wikipedia.org/wiki/Mahatma_Gandhi");
+        link.textContent = ' Mahatma Gandhi - Wikipedia '
+        document.getElementById('jf').innerHTML = "'Mohandas Karamchand Gandhi (/ˈɡɑːndi, ˈɡændi/; 2 October 1869 – 30 January 1948) was an Indian lawyer, anti-colonial nationalist, and political ethicist, who employed nonviolent resistance to lead the successful campaign for India's independence from British rule, and in turn inspired movements for civil rights and ...'"
+        var abz = 1
+        document.getElementById('ini').style.display = 'none';
+         dis()
+    }
+    if (inputValh == l) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "https://en.wikipedia.org/wiki/Julian_Assange");
+        link.textContent = 'Julian Assange - Wikipedia'
+        document.getElementById('jf').innerHTML = 'Julian Paul Assange (/əˈsɑːnʒ/; born 3 July 1971) is an Australian editor, publisher, and activist who founded WikiLeaks in 2006. WikiLeaks came to international attention in 2010 when it published a series of leaks provided by U.S. Army intelligence analyst Chelsea Manning.'
+        var abz = 1
+        document.getElementById('ini').style.display = 'none';
+         dis()
+    }
+    if (m == inputValh) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "https://en.wikipedia.org/wiki/Nelson_Mandela");
+        link.textContent = ' Nelson Mandela - Wikipedia  '
+        document.getElementById('jf').innerHTML = 'Nelson Rolihlahla Mandela was a South African anti-apartheid revolutionary, political leader and philanthropist who served as President of South Africa from ...'
+        var abz = 1
+        document.getElementById('ini').style.display = 'none';
+         dis()
+    }
+    if(inputValh.length==0){
+       var abz=1
+    }
+    if (abz != 1) {
+        var link = document.querySelector('a')
+        link.getAttribute('href');
+        link.setAttribute("href", "");
+        link.textContent = ''
+        document.getElementById('jf').innerHTML = 'Your search-did not match any documents.<br>suggestions:<br>•Make sure that all words are spelled correctly.<br>•Try different keywords.<br>•Try more general keywords.<br>•Try fewer keywords.'
+         document.getElementById('ini').style.display = 'none';  
+          dis() 
+    }
+}
+</script> 
+</body>
+</html>
